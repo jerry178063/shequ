@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/select_coin_tab"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        app:tabGravity="center"
+        app:xTabDividerWidthWidthText="true"
+        app:xTabIndicatorRoundX="1dp"
+        app:xTabIndicatorRoundY="1dp"
+        app:xTabIndicatorColor="@color/color_0265f0"
+        app:xTabIndicatorHeight="2dp"
+        app:xTabIndicatorWidth="0dp"
+        app:xTabMode="fixed"
+        app:xTabPaddingEnd="5dp"
+        app:xTabPaddingStart="5dp"
+        app:xTabSelectedTextColor="@color/color_0265f0"
+        app:xTabSelectedTextSize="16sp"
+        app:xTabTextColor="@color/color_8f9bb3"
+        app:xTabTextSize="16sp"
+        app:xTabTextBold="true"
+        app:xTabTextSelectedBold="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/color_0a1221" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_hq_search_drawer_black" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="搜索币种"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColor="@color/color_d4dae5"
+            android:textColorHint="@color/color_647187"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/color_0a1221" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/coin_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_bib"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

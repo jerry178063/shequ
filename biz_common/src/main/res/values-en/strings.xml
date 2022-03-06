@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chinese">chinese</string>
+    <string name="english">english</string>
+    <string name="home">Home</string>
+    <string name="minning">Minning</string>
+    <string name="discovery">Discovery</string>
+    <string name="my">My</string>
+    <string name="login_phone" translatable="false">Please input account number</string>
+    <string name="login_password" translatable="false">Please input password</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="forgot_phone" translatable="false">Please enter your registered mobile phone num or email</string>
+    <string name="forgot_code" translatable="false">Please enter a verification code</string>
+    <string name="forgot_password" translatable="false">Please enter your 6-20 digit password</string>
+    <string name="forgot_password_again" translatable="false">Please enter your 6-20 digit password again</string>
+    <string name="forgot_passwordc" translatable="false">Re-enter password</string>
+    <string name="send_code" translatable="false">Get the code</string>
+    <string name="identify" translatable="false">Identify</string>
+    <string name="forgot_password_identify" translatable="false">The two passwords are different</string>
+    <string name="mining_coin">Mining coin</string>
+    <string name="contract_duration">Contract duration</string>
+    <string name="technical_service_fees">Technical service fees</string>
+    <string name="push_to_buy">Push to buy</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="introduce">Introduce</string>
+    <string name="computing_power_details">Computing Power Details</string>
+    <string name="forgot_phone_yes" translatable="false">Please enter your correct mobile phone num or email</string>
+</resources>

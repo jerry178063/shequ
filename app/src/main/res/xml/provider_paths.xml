@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <external-files-path
+        name="down_external_path"
+        path="" />
+    &lt;!&ndash;/storage/emulated/0/Android/data/${applicationId}/files/apk/&ndash;&gt;
+    <external-files-path
+        name="down_external_files_path"
+        path="" />
+    <external-cache-path
+        name="beta_external_path"
+        path="zly.apk" />-->
+
+
+    <files-path
+        name="Download"
+        path="Download/" />
+    <external-path
+        name="Download"
+        path="Download/" />
+    <external-path
+        name="camera_photos"
+        path="." />
+    <external-path
+        name="files_root"
+        path="Android/data/com.unique.blockchain.nodemgr/" />
+    <external-path
+        name="external_storage_root"
+        path="." />
+    <root-path
+        name="root_path"
+        path="." />
+
+</resources>

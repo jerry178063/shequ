@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".view.activity.wallet.AdditionlActivity">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/topics_head_sss_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_303235"
+                android:text="标题"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_56"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:hint="请输入标题内容"
+                android:paddingLeft="@dimen/dp_10"
+                android:background="@drawable/dialog_bg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_303235"
+                android:text="内容"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_135"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="top"
+                android:paddingTop="@dimen/dp_10"
+                android:hint="请输入文本内容"
+                android:paddingLeft="@dimen/dp_10"
+                android:background="@drawable/dialog_bg"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_gravity="end|bottom"
+                    android:paddingBottom="@dimen/dp_3"
+                    android:paddingRight="@dimen/dp_3"
+                    android:text="0/800"/>
+
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_303235"
+                android:text="投票须知"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginBottom="@dimen/dp_80"
+                android:textColor="#646566"
+                android:gravity="left"
+                android:text="1.当前投票可发起赞助,自己需投入一定的GAUSS为基础发起赞助,市场可以随意赞助任意量的GAUSS,赞助期限为五天,期间未达到512GAUSS相应的值,发起赞助的投票方案作废,可在赞助期结束前自行补充GAUSS赞助,保证发起投票成功;\n2.可以直接发起投票,需要质押512个GAUSS,通过后返回账户,投票否决后自动销毁其GAUSS;\n3.投票发起后,所有人可参与投票,投票时间为两周,投票结果为赞成>反对,质押的GAUSS放回发起投票者账户,反对>赞成,质押的GAUSS就会销毁,不可否定>31%时即为投票不通过,投票方案被市场接受,该质押的GAUSS原路返回账户;\n4.参与必要条件:有钱包并且有委托的人才有资格参与投票;\n5.验证人参与投票:其下的委托人若无参与投票,即判断为跟票,参与者不计;\n6.委托人参与投票:只计算其委托人投票数;" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_start_zanzhu"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:gravity="center"
+            android:background="@drawable/assets_detail_transfer_bg"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:text="发起赞助"/>
+        <TextView
+            android:id="@+id/tv_start_vote"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/assets_detail_receive_bg"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:text="发起投票"/>
+
+    </LinearLayout>
+</RelativeLayout>

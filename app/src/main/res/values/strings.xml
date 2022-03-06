@@ -1,0 +1,56 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="MissingTranslation">unique</string>
+    <string name="create_wallet" tools:ignore="MissingTranslation">创建钱包</string>
+    <string name="import_wallet" tools:ignore="MissingTranslation">导入钱包</string>
+    <string name="turn_airplane_mode" tools:ignore="MissingTranslation">打开飞行模式</string>
+    <string name="for_your_wallet_security" tools:ignore="MissingTranslation">为了您的钱包安全，强烈建议您在创建时打开飞行模式关闭一切网络，进行离线创建, 以免造成资产的损失！</string>
+    <string name="i_know" tools:ignore="MissingTranslation">我知道了</string>
+    <string name="wallet_name" tools:ignore="MissingTranslation">钱包名称</string>
+    <string name="please_enter_the_wallet_name" tools:ignore="MissingTranslation">请输入钱包名称</string>
+    <string name="security_code" tools:ignore="MissingTranslation">安全密码</string>
+    <string name="please_enter_secure_password" tools:ignore="MissingTranslation">请输入安全密码</string>
+    <string name="the_password_combination" tools:ignore="MissingTranslation">密码为6-15位数字、字母、特殊字符组合</string>
+    <string name="determine_secure_password" tools:ignore="MissingTranslation">确认安全密码</string>
+    <string name="please_enter_security_password_again" tools:ignore="MissingTranslation">请再次输入安全密码</string>
+    <string name="agree_and_read" tools:ignore="MissingTranslation">同意并阅读</string>
+    <string name="main_chain_selection" tools:ignore="MissingTranslation">主链选择</string>
+    <string name="next_step" tools:ignore="MissingTranslation">下一步</string>
+    <string name="backup_tips" tools:ignore="MissingTranslation">备份提示</string>
+    <string name="backed_skip_this_step" tools:ignore="MissingTranslation">已备份？跳过此步骤</string>
+    <string name="obtaining_the_mnemonic" tools:ignore="MissingTranslation">获得助记词等于拥有钱包资产所有权</string>
+    <string name="mnemonic_phrase_is_lost" tools:ignore="MissingTranslation">·助记词由英文单词组成，请抄写并妥善保管。\n·助记词丢失，无法找回，请务必备份助记词。</string>
+    <string name="mnemonic_phrase_in_a_safe_place" tools:ignore="MissingTranslation">·助记词只在首次创建钱包时备份一次，以后均不再备份，请务必将助记词记录在安全的地方，确保您的钱包安全。</string>
+    <string name="back_up_now" tools:ignore="MissingTranslation">立即备份</string>
+    <string name="keep_the_mnemonic_phrase_properly" tools:ignore="MissingTranslation">·妥善保管助记词至隔离网络的安全地方。\n·请勿将助记词在联网环境下分享和储存，比如邮件、 相册、社交应用等。</string>
+    <string name="please_complete_mnemonic" tools:ignore="MissingTranslation">请完善助记词</string>
+    <string name="mnemonic_phrase_is_wrong" tools:ignore="MissingTranslation">助记词错误，请重新输入</string>
+    <string name="please_enter_the_mnemonic_words" tools:ignore="MissingTranslation">请输入助记词单词，并使用空格分隔</string>
+    <string name="the_mnemonic_phrase_wrong" tools:ignore="MissingTranslation">*助记词错误，请重新输入</string>
+    <string name="invitation_code" tools:ignore="MissingTranslation">邀请码</string>
+    <string name="please_enter_invitation_code" tools:ignore="MissingTranslation">请输入邀请码</string>
+    <string name="please_check_user_agreement" tools:ignore="MissingTranslation">请勾选用户协议</string>
+    <string name="please_enter_wallet_name" tools:ignore="MissingTranslation">请输入钱包名称</string>
+    <string name="the_two_passwords_not_consistent" tools:ignore="MissingTranslation">两次密码不一致</string>
+    <string name="the_user_already_exists_locally" tools:ignore="MissingTranslation">本地已经有了该用户</string>
+    <string name="the_network_is_not_open" tools:ignore="MissingTranslation">网络未打开,请先打开网络</string>
+    <string name="main_me" tools:ignore="MissingTranslation">我的</string>
+    <string name="on_chain_assets" tools:ignore="MissingTranslation">链上资产</string>
+    <string name="cross_chain_assets" tools:ignore="MissingTranslation">跨链资产</string>
+    <string name="contract_assets" tools:ignore="MissingTranslation">合约资产</string>
+    <string name="enable_permission_guidance" tools:ignore="MissingTranslation">开启权限引导</string>
+    <string name="the_permissions_that_permanently" tools:ignore="MissingTranslation">被您永久禁用的权限为应用必要权限，是否需要引导您去手动开启权限呢？</string>
+    <string name="ok" tools:ignore="MissingTranslation">好的</string>
+    <string name="next_time" tools:ignore="MissingTranslation">下一次</string>
+    <string name="please_enter_the_mnemonic_phrase" tools:ignore="MissingTranslation">请输入助记词</string>
+    <string name="total_assets_usdg" tools:ignore="MissingTranslation">总资产</string>
+    <string name="all_assets" tools:ignore="MissingTranslation">全部</string>
+    <string name="transfer_in" tools:ignore="MissingTranslation">转入</string>
+    <string name="transfer_out" tools:ignore="MissingTranslation">转出</string>
+    <string name="failure_assets" tools:ignore="MissingTranslation">失败</string>
+    <string name="transfer" tools:ignore="MissingTranslation">转账</string>
+    <string name="receive_payment" tools:ignore="MissingTranslation">收款</string>
+    <string name="assets_manager" tools:ignore="MissingTranslation">管理</string>
+    <string name="isuser" translatable="false">本地已经有了该用户</string>
+    <string name="net" translatable="false">网络未打开,请先打开网络</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

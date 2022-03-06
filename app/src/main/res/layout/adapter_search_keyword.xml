@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/go_trade_piaowu_bu"
+    android:paddingBottom="@dimen/dp_6"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:includeFontPadding="false"
+    android:paddingTop="@dimen/dp_6"
+    android:textColor="#2E2E2E"
+    />

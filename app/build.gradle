@@ -1,0 +1,250 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+}
+
+apply plugin: 'org.greenrobot.greendao'
+
+
+android {
+
+    greendao {
+
+        schemaVersion 3  //数据库版本号，升级数据库需要修改版本号
+
+        daoPackage 'com.unique.blockchain.unique'  //一般为app包名+生成文件的文件夹名
+
+        targetGenDir 'src/main/java'  //自动生成的greendao代码存放路径
+
+    }
+    flavorDimensions "location"
+
+    productFlavors {
+    }
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId "com.nft.blockchain.nodemgr"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionName rootProject.ext.android.versionName
+        versionCode rootProject.ext.android.versionCode
+        multiDexEnabled true
+        testInstrumentationRunner "android.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "a44682935ed2fa0f4eaa5e39", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+        javaCompileOptions {
+            // ARouter
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    signingConfigs {
+        def password = "gpbgpb"
+        def alias = "key0"
+        def filePath = "../unique.jks"
+
+        debug {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+        release {
+            keyAlias SIGN_KEY_ALIAS
+            keyPassword SIGN_PASSWORD
+            storeFile file(SIGN_KEY_PATH)
+            storePassword(SIGN_PASSWORD)
+        }
+    }
+    buildTypes {
+        mrelease.initWith(buildTypes.debug)
+        mrelease {
+            matchingFallbacks = ['debug']
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "API_HOST", "\"http://www.com\"")
+            signingConfig signingConfigs.release
+        }
+        debug245 {
+            debuggable true
+            minifyEnabled false
+            buildConfigField("String", "API_HOST", "\"http://192.168.\"")
+            signingConfig signingConfigs.release
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        disable 'CheckResult'
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${variant.name}_v${variant.versionName}_${variant.buildType.name}_${getDate()}.apk".toLowerCase()
+        }
+    }
+
+
+    packagingOptions {
+        exclude 'META-INFTICE.txt'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+        exclude 'META-INF/maven/data.domybox.com/data.sdk/pom.properties'
+        exclude 'META-INF/maven/data.domybox.com/data.sdk/pom.xml'
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+
+}
+//获取时间戳
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('MMdd')
+    return formattedDate
+}
+dependencies {
+    implementation fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+    implementation rootProject.ext.deps.appcompat
+    implementation rootProject.ext.deps.recyclerview
+    implementation rootProject.ext.deps.design
+    implementation rootProject.ext.deps.constraintLayout
+    implementation rootProject.ext.deps.cardview
+    implementation rootProject.ext.deps.pickerview
+    implementation rootProject.ext.deps.junit
+//    implementation rootProject.ext.deps.zxingcore
+//    implementation rootProject.ext.deps.zxingscanner
+    implementation rootProject.ext.deps.glide
+    implementation rootProject.ext.deps.gifdrawable
+    implementation rootProject.ext.deps.libnetstatelayout
+    implementation rootProject.ext.deps.stateframelayout
+    implementation rootProject.ext.deps.circleimageview
+    implementation rootProject.ext.deps.keyboardvisibilityevent
+    implementation rootProject.ext.deps.bannber
+    implementation rootProject.ext.deps.xxpermissions
+    implementation rootProject.ext.deps.multidex
+    implementation rootProject.ext.deps.happybubble
+    implementation rootProject.ext.deps.utilcode
+    //引用生成gauss地址的依赖方式
+//    implementation "com.trustwallet:wallet-core:2.1.0"
+//    implementation rootProject.ext.deps.space_util
+    api 'org.greenrobot:greendao:3.3.0'
+
+    api 'org.greenrobot:greendao-generator:3.3.0'
+
+    api 'io.github.yuweiguocn:GreenDaoUpgradeHelper:v2.2.1'
+    implementation project(path: ':networklibs')
+    implementation project(path: ':imageselector')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(path: ':biz_common')
+    implementation project(path: ':biz_common')
+    implementation project(path: ':biz_common')
+    implementation project(path: ':networklibs')
+    implementation project(path: ':biz_common')
+    implementation project(path: ':biz_common')
+    implementation 'com.google.ar.sceneform:filament-android:1.17.1'
+    implementation 'org.web3j:core:3.3.1-android'
+    // 本模块支持ARouter注解
+    kapt rootProject.ext.deps.arouter
+    // 本模块支持ButterKnife注解
+    kapt rootProject.ext.deps.butterknife
+    implementation rootProject.ext.deps.kotlin
+    implementation project(':biz_net')
+    implementation project(':biz_common')
+    implementation project(':biz_widget')
+    implementation project(':lib_opensource')
+    //扫描二维码
+    implementation 'com.github.yuzhiqiang1993:zxing:2.1.4'
+    implementation('com.squareup.okhttp3:okhttp:4.4.0')
+    //图片选择库
+    implementation 'com.lzy.widget:imagepicker:0.6.1'
+    implementation 'com.mcxiaoke.xbus:bus:1.0.+'
+
+    //网络请求库
+    implementation 'com.lzy.net:okserver:1.1.0'
+    implementation 'com.lzy.net:okgo:2.1.4'
+    //轮播图控件
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.0'
+    //版本更新库
+    implementation 'com.teprinciple:updateapputils:2.3.0'
+    implementation "com.google.protobuf:protobuf-java:3.9.0"
+    //裁剪图片库
+    implementation 'com.soundcloud.android:android-crop:1.0.1@aar'
+    //申请权限管理
+    implementation 'pub.devrel:easypermissions:0.1.7'
+    //仿微信多选图片
+    implementation 'com.github.lovetuzitong:MultiImageSelector:1.2'
+    //EventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    implementation "org.bitcoinj:bitcoinj-core:0.14.7"
+    implementation 'com.zzhoujay.richtext:richtext:3.0.8'
+    implementation 'com.zzhoujay:html:1.0.1'
+    //搜索
+    implementation 'com.github.chengzipi:Searchbox:v1.0.0'
+    //Dialog，PopupWindow
+    implementation 'com.lxj:xpopup:1.8.7'
+//    //Utils全局的
+//    implementation 'com.blankj:utilcode:1.26.0'
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'//
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'//配合Rxjava 使用
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //流式布局
+    //TagFlowLayout
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+
+    //竖着的TabLayout
+    implementation 'q.rorbin:VerticalTabLayout:1.2.5'
+    //navigationView recyclerview
+    // implementation 'com.android.support:design:28.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+//RecyclerVIew
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+//Glide 4.x
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+//okHttp
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.google.code.gson:gson:2.6.2'//Gson 库
+//自动刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+//轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+//侧滑菜单 侧滑导航
+    implementation 'com.android.support:design:30.+'
+//EventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.github.0xZhangKe:WebSocketDemo:3.0.1'
+    //刷新框架
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14'//没有使用特殊Header，可以不加这行
+    implementation 'com.android.support:appcompat-v7:25.3.1'//版本 23以上（必须）
+
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'com.android.support:design:28.0.0'
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.4'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.google.code.gson:gson:2.6.2'
+
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.youth.banner.Banner
+        android:id="@+id/butt_Banner_detail"
+        android:layout_width="match_parent"
+        android:layout_height="375dp"></com.youth.banner.Banner>
+
+    <RelativeLayout
+        android:id="@+id/rela_video"
+        android:layout_width="match_parent"
+        android:layout_height="375dp"
+        android:background="@drawable/bg_go_trade">
+
+
+        <VideoView
+            android:id="@+id/webView_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="375dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+
+        <!--        android:background="#80000000"-->
+        <LinearLayout
+            android:id="@+id/isShow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp_90"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/play1"
+                android:layout_width="20dp"
+                android:layout_height="@dimen/dp_20"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/video_start" />
+
+            <TextView
+                android:id="@+id/s1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#fff" />
+
+            <SeekBar
+                android:id="@+id/SeekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="6"
+                android:indeterminate="false"
+                android:maxHeight="5dp"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/s2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#fff" />
+
+            <ImageView
+                android:id="@+id/setMax"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_page"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/sp_15"
+        android:background="@drawable/mark_detail_page"
+        android:gravity="center"
+        android:paddingLeft="@dimen/sp_20"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingRight="@dimen/sp_20"
+        android:paddingBottom="@dimen/dp_3"
+        android:text="1/2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15" />
+
+</FrameLayout>

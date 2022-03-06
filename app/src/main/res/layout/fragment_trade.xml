@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/buy_me_nft_bg"
+    android:orientation="vertical"
+    tools:context=".view.activity.trade.AdminCommissionActivity">
+
+    <RelativeLayout
+        android:id="@+id/rela_top_grade"
+        android:background="@drawable/bg_go_trade"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80">
+
+        <LinearLayout
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_80"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/dp_30"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:src="@mipmap/trade_back_two" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_go_trade"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_80"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_30"
+            android:text="销售我的NFT"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/lin_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rela_top_grade"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="@dimen/dp_2"
+                android:layout_height="@dimen/sp_22"
+                android:background="#E9CDB6"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="NFT资产"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:id="@+id/liu_souyy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_19"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/sou_text">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_18"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="请输入NFT资产名称"
+                android:textColor="#D4D8DB"
+                android:textSize="@dimen/dp_15" />
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/sousuo" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_below="@+id/lin_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tv_go_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_100"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_165"
+                    android:layout_height="@dimen/dp_165"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/no_nft" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="暂无NFT," />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="去浏览"
+                        android:textColor="#80BFFD" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclew_trade"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_10" />
+
+        </LinearLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</RelativeLayout>

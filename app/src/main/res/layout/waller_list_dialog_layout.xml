@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_shape"
+    android:layout_height="@dimen/dp_269">
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_54"
+        android:text="钱包列表"
+        android:gravity="center"
+        android:textColor="#ff261a37"
+        android:textSize="@dimen/sp_16"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#F7F7F7"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_269"
+        android:background="@color/white_color"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#6C6D6F"/>
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:text="取消"
+        android:gravity="center"
+        android:textColor="#5678E5"
+        android:textSize="@dimen/sp_16"
+        />
+</LinearLayout>

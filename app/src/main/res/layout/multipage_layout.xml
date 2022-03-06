@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFF"
+    android:layout_width="match_parent"
+    android:id="@+id/multiply_"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49">
+            <RadioButton
+                android:checked="true"
+                style="@style/demoStyle"
+                android:background="@drawable/kkk"
+                android:textColor="@drawable/lll"
+
+                android:text="全部"
+                android:id="@+id/text_All"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dp_57"
+                android:layout_height="@dimen/dp_26">
+
+            </RadioButton>
+            <RadioButton
+                style="@style/demoStyle"
+                android:background="@drawable/kkk"
+                android:textColor="@drawable/lll"
+                android:id="@+id/text_yishu"
+                android:layout_gravity="center"
+                android:text="艺术品"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_width="@dimen/dp_57"
+                android:layout_height="@dimen/dp_26">
+
+            </RadioButton>
+            <RadioButton
+                android:background="@drawable/kkk"
+                style="@style/demoStyle"
+                android:textColor="@drawable/lll"
+                android:layout_gravity="center"
+                android:text="收藏品"
+                android:gravity="center"
+                android:id="@+id/text_shoucang"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_width="@dimen/dp_57"
+                android:layout_height="@dimen/dp_26">
+
+            </RadioButton>
+            <RadioButton
+                android:background="@drawable/kkk"
+                style="@style/demoStyle"
+                android:textColor="@drawable/lll"
+                android:layout_gravity="center"
+                android:text="票务"
+                android:gravity="center"
+                android:id="@+id/text_piaowu"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_width="@dimen/dp_57"
+                android:layout_height="@dimen/dp_26">
+
+            </RadioButton>
+            <RadioButton
+                android:background="@drawable/kkk"
+                style="@style/demoStyle"
+                android:textColor="@drawable/lll"
+                android:id="@+id/text_qing"
+                android:layout_gravity="center"
+                android:text="轻奢品"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_19"
+                android:layout_width="@dimen/dp_57"
+                android:layout_height="@dimen/dp_26">
+
+            </RadioButton>
+
+        </RadioGroup>
+        <FrameLayout
+            android:id="@+id/include_frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+</LinearLayout>

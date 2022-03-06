@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/first_create_img"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".view.activity.wallet.FristCreadActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_187"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/fitst_create_logo" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_88"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/first_wajue_img" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_create_wallet"
+            android:layout_width="@dimen/dp_280"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginTop="@dimen/dp_25"
+            android:background="@mipmap/create_waller_img"
+            android:gravity="center"
+            android:text="@string/create_wallet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"></TextView>
+
+
+        <TextView
+            android:id="@+id/tv_load_wallet"
+            android:layout_width="@dimen/dp_280"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginTop="@dimen/dp_25"
+            android:background="@mipmap/import_wallet_img"
+            android:gravity="center"
+            android:text="@string/import_wallet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"></TextView>
+
+    </LinearLayout>
+</LinearLayout>

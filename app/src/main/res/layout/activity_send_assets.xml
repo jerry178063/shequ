@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".view.activity.trade.SendAssetsActivity">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/topics_head_sss_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_15"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拥有者"
+                    android:textColor="#646566"
+                    android:textSize="@dimen/sp_16" />
+
+                <EditText
+                    android:id="@+id/et_gauss_adress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/dialog_bg"
+                    android:enabled="false"
+                    android:hint=""
+                    android:paddingLeft="@dimen/dp_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="资产图标"
+                    android:textColor="#646566"
+                    android:textSize="@dimen/sp_16" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:choiceMode="singleChoice"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbarStyle="outsideOverlay"
+                    app:spanCount="4"
+                    tools:listitem="@layout/list_item_image" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="资产名称"
+                    android:textColor="#646566"
+                    android:textSize="@dimen/sp_16" />
+
+                <EditText
+                    android:id="@+id/ed_assets_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/dialog_bg"
+                    android:hint="请输入资产名称"
+                    android:paddingLeft="@dimen/dp_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="资产单位"
+                    android:textColor="#646566"
+                    android:textSize="@dimen/sp_16" />
+
+                <EditText
+                    android:id="@+id/et_assets_quit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/dialog_bg"
+                    android:hint="请输入资产单位"
+                    android:paddingLeft="@dimen/dp_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最小资产单位"
+                    android:textColor="#646566"
+                    android:textSize="@dimen/sp_16" />
+
+                <EditText
+                    android:id="@+id/et_min_assets_quit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/dialog_bg"
+                    android:hint="请输入最小资产单位"
+                    android:paddingLeft="@dimen/dp_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小数位数"
+                    android:textColor="#646566"
+                    android:textSize="@dimen/sp_16" />
+
+                <EditText
+                    android:id="@+id/et_num_weishu"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/dialog_bg"
+                    android:hint="请输入最小数位数"
+                    android:paddingLeft="@dimen/dp_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="初始发行量"
+                    android:textColor="#646566"
+                    android:textSize="@dimen/sp_16" />
+
+                <EditText
+                    android:id="@+id/et_start_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/dialog_bg"
+                    android:hint="请输入初始发行量"
+                    android:paddingLeft="@dimen/dp_15" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="*发行资产之后可以增发,增发后的供应量不超过最大发行量"
+                android:textColor="#E77474"
+                android:textSize="@dimen/sp_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最大发行量"
+                    android:textColor="#646566"
+                    android:textSize="@dimen/sp_16" />
+
+                <EditText
+                    android:id="@+id/et_max_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/dialog_bg"
+                    android:hint="请输入最大发行量"
+                    android:paddingLeft="@dimen/dp_15" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="*默认不限量"
+                android:textColor="#E77474"
+                android:textSize="@dimen/sp_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="官网(选填)"
+                    android:textColor="#646566"
+                    android:textSize="@dimen/sp_16" />
+
+                <EditText
+                    android:id="@+id/et_guanwang_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/dialog_bg"
+                    android:hint="请输入官网网址"
+                    android:paddingLeft="@dimen/dp_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="官方邮箱(选填)"
+                    android:textColor="#646566"
+                    android:textSize="@dimen/sp_16" />
+
+                <EditText
+                    android:id="@+id/et_net_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/dialog_bg"
+                    android:hint="请输入官网网址"
+                    android:paddingLeft="@dimen/dp_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/chekcBox_assets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="锁定资产"
+                    android:textColor="#646566"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="*发行后即锁定资产,锁定期间不影响增发,但是不允许转账"
+                android:textColor="#E77474"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="简介描述"
+                android:textColor="#646566"
+                android:textSize="@dimen/sp_16" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_100">
+
+                <EditText
+                    android:id="@+id/et_input_deail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_135"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@drawable/dialog_bg"
+                    android:gravity="top"
+                    android:hint="请输入简介内容"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:gravity="end"
+                    android:paddingRight="@dimen/dp_3"
+                    android:paddingBottom="@dimen/dp_3"
+                    android:text="0/120" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_send_assets"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_42"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/assets_detail_transfer_bg"
+            android:gravity="center"
+            android:text="发行该资产"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+</RelativeLayout>

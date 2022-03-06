@@ -1,0 +1,6 @@
+/build
+/src/main/gen/*
+*.apk
+/src/main/assets/*.json
+/src/test/assets/*.json
+*.iml

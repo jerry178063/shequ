@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".view.activity.me.WalletManagerActivity">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/topics_head_sss_layout"/>
+    <RelativeLayout
+        android:id="@+id/rela_create_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_below="@+id/top">
+
+        <TextView
+            android:id="@+id/tc_create_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建钱包"
+            android:drawablePadding="@dimen/dp_4"
+            android:layout_marginLeft="@dimen/dp_49"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/wy19"/>
+        <TextView
+            android:id="@+id/tv_import_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="导入钱包"
+            android:drawablePadding="@dimen/dp_4"
+            android:layout_marginRight="@dimen/dp_49"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/daoru"/>
+
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rela_create_wallet"
+        android:layout_marginBottom="@dimen/dp_55"
+        android:layout_weight="1">
+
+
+        <com.unique.blockchain.nft.widget.SlideRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </com.unique.blockchain.nft.widget.SlideRecyclerView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:background="#F8F9F9"/>
+
+
+</RelativeLayout>

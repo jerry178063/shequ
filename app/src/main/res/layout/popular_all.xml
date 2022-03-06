@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FBFAFA"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="@dimen/dp_351"
+        android:layout_height="@dimen/dp_170">
+
+        <ImageView
+            android:id="@+id/popular_img"
+            android:layout_width="@dimen/dp_160"
+            android:layout_height="match_parent"></ImageView>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/dp_6"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_17">
+                <TextView
+                    android:id="@+id/popular_state"
+                    android:background="@drawable/shop"
+                    android:layout_width="@dimen/dp_37"
+                    android:layout_height="@dimen/dp_17">
+                </TextView>
+                <TextView
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="五月天演唱会门票"
+                    android:textColor="#ff2f2f2f"
+                    android:textSize="12sp">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:background="#000"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_31"
+                android:layout_width="@dimen/dp_75"
+                android:layout_height="@dimen/dp_26">
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="21dp"
+                    android:text="出价"
+                    android:textColor="#fff8ddaf"
+                    android:textSize="15sp">
+                </TextView>
+                <ImageView
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:background="@drawable/paimai"
+                    android:layout_width="@dimen/dp_13"
+                    android:layout_height="@dimen/dp_13">
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最高出价:" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textColor="#CF4545"
+                    android:textSize="@dimen/sp_20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="unique"
+                    android:textColor="#CF4545" />
+
+            </LinearLayout>
+            <LinearLayout
+               android:layout_marginTop="@dimen/dp_5"
+                android:background="#E9CDB6"
+                android:layout_width="@dimen/dp_143"
+                android:layout_height="@dimen/dp_30">
+                <ImageView
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_gravity="center"
+                    android:src="@drawable/shijianei"
+                    android:layout_width="@dimen/dp_13"
+                    android:layout_height="@dimen/dp_14">
+                </ImageView>
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dp_3"
+                        android:layout_width="@dimen/dp_19"
+                        android:layout_height="@dimen/dp_19"
+                        android:background="#000"
+                        android:text="00"
+                        android:textColor="#fff">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19"
+                        android:text=":"
+                        android:textColor="#000000">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="@dimen/dp_19"
+                        android:layout_height="@dimen/dp_19"
+                        android:background="#000"
+                        android:text="00"
+                        android:textColor="#fff">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_19"
+                        android:text=":"
+                        android:textColor="#000000">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="@dimen/dp_19"
+                        android:layout_height="@dimen/dp_19"
+                        android:background="#000"
+                        android:text="00"
+                        android:textColor="#fff">
+                    </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+ 
+</LinearLayout>

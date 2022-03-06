@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:background="@drawable/bg_go_trade">
+
+        <LinearLayout
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:src="@mipmap/trade_back_two" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="闪 兑"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white" />
+
+
+        <LinearLayout
+            android:id="@+id/img_flash_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:src="@mipmap/jiludanzilishijilu" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_65"
+        android:layout_below="@+id/top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/shape_dialog_white_10_k_bg">
+
+                <RelativeLayout
+                    android:id="@+id/lin_typechoose"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_43"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/home_shandui_choose_bg"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/tv_name_choose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#757594"
+                        android:layout_gravity="left"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:text="USDT"/>
+                    <ImageView
+                        android:layout_width="@dimen/dp_9"
+                        android:layout_height="@dimen/dp_6"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_gravity="right"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/home_typ_img"
+                        android:scaleType="centerCrop"/>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_usdg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_35"
+                    android:textSize="@dimen/sp_16"
+                    android:inputType="numberDecimal"
+                    android:hint="请输入数量 (1-1000)"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="#E1E1E1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_zichan_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="可用USDT:"/>
+                    <TextView
+                        android:id="@+id/tv_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:text="0.000000"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:src="@mipmap/zhuanhuan"
+                android:layout_marginTop="@dimen/dp_20"
+                android:scaleType="centerCrop"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/shape_dialog_white_10_k_bg">
+
+                <RelativeLayout
+                    android:id="@+id/rela_type_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_43"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/home_shandui_choose_bg"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/tv_two_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:text="UNIQUE"
+                        android:textColor="#757594" />
+                    <ImageView
+                        android:layout_width="@dimen/dp_9"
+                        android:layout_height="@dimen/dp_6"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_gravity="right"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/home_typ_img"
+                        android:scaleType="centerCrop"/>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_gauss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_35"
+                    android:textSize="@dimen/sp_16"
+                    android:hint="预计兑换可得"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="#E1E1E1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#7A7A7A"
+                        android:textSize="@dimen/sp_12"
+                        android:text="矿工费:0.009USDT"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:textColor="#7A7A7A"
+                        android:textSize="@dimen/sp_12"
+                        android:text="当日最高可兑换数量:10000UNIQUE"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#7A7A7A"
+                        android:textSize="@dimen/sp_12"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:text="兑换比例:高于市场的3%"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:text="确    定"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:gravity="center"
+        android:textColor="#F6DBAD"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@drawable/go_trade_bg"/>
+
+
+
+</RelativeLayout>

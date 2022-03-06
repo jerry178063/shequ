@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="can_not_connect_network" tools:ignore="MissingTranslation">无法连接网络,请检查网络</string>
+    <string name="no_data" translatable="false">暂无数据</string>
+    <string name="chinese">中文</string>
+    <string name="english">英语</string>
+    <string name="home">首页</string>
+    <string name="minning">矿池</string>
+    <string name="discovery">发现</string>
+    <string name="my">我的</string>
+    <string name="login_phone" translatable="false">请输入账号</string>
+    <string name="login_password" translatable="false">请输入密码</string>
+    <string name="login" translatable="false">登录</string>
+    <string name="forgot_phone" translatable="false">请输入注册手机号码或邮箱</string>
+    <string name="forgot_phone_yes" translatable="false">请输入正确的手机号码或邮箱</string>
+    <string name="forgot_code" translatable="false">请输入验证码</string>
+    <string name="forgot_password" translatable="false">请输入6-20位登录密码</string>
+    <string name="forgot_password_again" translatable="false">请再次输入6-20位登录密码</string>
+    <string name="forgot_passwordc" translatable="false">再次输入登录密码</string>
+    <string name="send_code" translatable="false">获取验证码</string>
+    <string name="identify" translatable="false">确定</string>
+    <string name="forgot_password_identify" translatable="false">两次密码不一样</string>
+    <string name="mining_coin" >挖矿币种</string>
+    <string name="contract_duration">合约期限</string>
+    <string name="technical_service_fees">技术服务费</string>
+    <string name="push_to_buy">抢购倒计时</string>
+    <string name="buy_now">立即购买</string>
+    <string name="introduce">商品介绍</string>
+    <string name="computing_power_details">算力详情</string>
+    <string name="to_expand_hint" translatable="false">Expand</string>
+    <string name="to_shrink_hint" translatable="false">Shrink</string>
+</resources>

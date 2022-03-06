@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:background="@drawable/bg_go_trade">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:src="@mipmap/trade_back_two" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="购买"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_90"
+        android:src="@mipmap/mark_goumai_success"
+        android:layout_marginTop="@dimen/dp_130"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_succes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="购买成功"
+        android:textColor="#232323"
+        android:layout_marginTop="@dimen/dp_22"
+        android:textSize="@dimen/sp_21"/>
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正在进行资产转移,移交到您的钱包"
+        android:layout_marginRight="@dimen/dp_25"
+        android:layout_marginLeft="@dimen/dp_25"
+        android:textColor="#AC7951"
+        android:layout_marginTop="@dimen/dp_22"
+        android:textSize="@dimen/sp_14"/>
+
+</LinearLayout>

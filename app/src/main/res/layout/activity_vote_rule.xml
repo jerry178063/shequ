@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".view.activity.wallet.AdditionlActivity">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/topics_head_sss_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_303235"
+                android:text="发起"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#646566"
+                android:text="发起投票需要质押512个GAUSS作为投票委托条件,可发起赞助,让所有人都可以参与赞助额度到达512GAUSS,也可以直接发起投票。"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_303235"
+                android:text="赞助"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#646566"
+                android:text="赞助期间,若未达到512个GUASS,投票方案取消,质押当中的GAUSS也同时销毁,在赞助期间结束前也可以补到512GAUSS发起投票。" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_303235"
+                android:text="发起后"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#646566"
+                android:text="投票发起后,所有人可参与投票,投票结果:\n1.赞成>反对,质押的GAUSS放回发起投票者账户;\n2.反对>赞成,质押的GAUSS就会销毁;\n3.不可否定>31%时即为投票不通过。" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_303235"
+                android:text="时间周期"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#646566"
+                android:text="投票方案时间为2周,以时间结束为结果导向,投票方案通过后,质押的GAUSS原路返回发起投票账户/赞助账户。" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_303235"
+                android:text="注意事项"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#646566"
+                android:text="1.参与必要条件:有钱包并且也委托的人才有资格参与投票;\n2.验证人参与投票:其下的委托人若无参与投票,即判断为跟票,参与者不计;\n3.委托人参与投票,只计算其委托人投票数;" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

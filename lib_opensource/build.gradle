@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionName rootProject.ext.android.defaultName
+        versionCode rootProject.ext.android.defaultCode
+        // ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+    buildTypes {
+        mrelease.initWith(buildTypes.debug)
+        mrelease {
+            matchingFallbacks = ['debug']
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+
+    api rootProject.ext.deps.butterknifeapi
+    api rootProject.ext.deps.eventbus
+    api rootProject.ext.deps.gson
+
+    // OkHttp + Retrofit + RxJava
+    api rootProject.ext.deps.okhttp
+    api rootProject.ext.deps.okhttpurl
+    api rootProject.ext.deps.okhttplogging
+    api rootProject.ext.deps.convertergson
+    api rootProject.ext.deps.rxjava2
+    api rootProject.ext.deps.rxandroid2
+    api rootProject.ext.deps.rxadapter
+    api rootProject.ext.deps.chuck
+
+    // ARouter
+    api rootProject.ext.deps.arouterapi
+    annotationProcessor rootProject.ext.deps.arouter
+
+    // 界面生命周期绑定
+    api rootProject.ext.deps.rxlifecycle2
+
+
+}

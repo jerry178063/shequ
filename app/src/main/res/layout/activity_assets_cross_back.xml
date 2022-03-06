@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".view.activity.wallet.AssetsDetailActivity">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/topics_head_sss_layout" />
+
+    <LinearLayout
+        android:id="@+id/lin_all_assets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="@dimen/dp_27"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="从"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_25"
+                android:textColor="@color/color_303235"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/sp_16"/>
+            <EditText
+                android:layout_width="@dimen/dp_133"
+                android:layout_weight="1"
+                android:background="@drawable/cread_wallet_bg"
+                android:layout_alignParentRight="true"
+                android:hint="GPB"
+                android:textSize="@dimen/sp_16"
+                android:textColorHint="#BBBCBE"
+                android:paddingLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_303235"
+                android:layout_height="@dimen/dp_36"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="到"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_25"
+            android:textColor="@color/color_303235"
+            android:textSize="@dimen/sp_16"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15"
+            android:background="@drawable/cread_wallet_bg"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/ed_scan_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入接收地址"
+                android:textSize="@dimen/sp_16"
+                android:textColorHint="#BBBCBE"
+                android:textColor="@color/color_303235"
+                android:layout_height="@dimen/dp_56"/>
+
+            <ImageView
+                android:id="@+id/img_saoyisao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_erweima"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转账数量"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_25"
+                android:textColor="@color/color_303235"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/sp_16"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用GPB:261.245645666"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_25"
+                android:textColor="@color/color_A9AAAB"
+                android:textSize="@dimen/sp_14"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15"
+            android:background="@drawable/cread_wallet_bg"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="最小数量0.000001"
+                android:textSize="@dimen/sp_16"
+                android:textColorHint="#BBBCBE"
+                android:textColor="@color/color_303235"
+                android:layout_height="@dimen/dp_56"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPB"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="矿工费"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_25"
+                android:textColor="@color/color_303235"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/sp_16"/>
+            <TextView
+                android:id="@+id/tv_icon_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用GPB:261.245645666"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_25"
+                android:textColor="@color/color_A9AAAB"
+                android:drawableRight="@mipmap/icon_more"
+                android:textSize="@dimen/sp_14"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跨链通道费"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_25"
+                android:textColor="@color/color_303235"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/sp_16"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.005GPB"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_25"
+                android:textColor="@color/color_A9AAAB"
+                android:textSize="@dimen/sp_14"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_cross_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:text="跨链"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/cread_shape"/>
+
+</RelativeLayout>

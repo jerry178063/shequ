@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="api_url" translatable="false">http://ckfpapi.coinka.cn/</string>
+<!--    <string name="web_url" translatable="false">http://ckfph5.zhonghanvip.com/</string>-->
+    <string name="web_url" translatable="false">http://njckfph5.dickman.cn/</string>
+</resources>

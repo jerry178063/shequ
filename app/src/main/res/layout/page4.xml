@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/page4"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:text="开启NFT之旅"
+        android:textSize="@dimen/dp_20"
+        android:textColor="#fff"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="@dimen/dp_47"
+        android:background="#475699"
+        android:layout_width="277dp"
+        android:layout_height="51dp">
+
+    </Button>
+</LinearLayout>

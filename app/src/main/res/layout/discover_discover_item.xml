@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_15"
+    android:layout_marginTop="@dimen/dp_15"
+    android:layout_marginRight="@dimen/dp_15"
+    android:background="@drawable/dialog_shape"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/img_left"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_70"
+        android:src="@mipmap/logo_gauss" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/has_compler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:gravity="center_vertical"
+            android:layout_gravity="top"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_303235"
+            android:text="" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_digest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:textSize="@dimen/sp_12"
+                android:textColor="#A9AAAB"
+                android:text="" />
+
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_15"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textSize="@dimen/sp_12"
+                android:textColor="#A9AAAB" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

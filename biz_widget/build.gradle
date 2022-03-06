@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionName rootProject.ext.android.defaultName
+        versionCode rootProject.ext.android.defaultCode
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+
+    buildTypes {
+        mrelease.initWith(buildTypes.debug)
+        mrelease {
+            matchingFallbacks = ['debug']
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+
+    api rootProject.ext.deps.xtablayout
+//    api rootProject.ext.deps.space_util
+    api rootProject.ext.deps.lifecycle
+
+    implementation project(':biz_common')
+    implementation project(':lib_opensource')
+    implementation project(path: ':biz_common')
+    implementation project(path: ':biz_common')
+    implementation project(path: ':biz_common')
+}

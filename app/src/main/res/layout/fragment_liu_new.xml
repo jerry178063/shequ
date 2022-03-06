@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_go_trade"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp_20">
+
+                    <LinearLayout
+                        android:id="@+id/liu_sou"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_marginBottom="@dimen/dp_15"
+                        android:background="@drawable/sou_text">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:layout_marginLeft="@dimen/dp_14"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:background="@drawable/sousuo" />
+
+                        <TextView
+                            android:layout_width="@dimen/dp_114"
+                            android:layout_height="@dimen/dp_20"
+                            android:layout_marginLeft="@dimen/dp_18"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="搜索NFT/铸造者"
+                            android:textColor="#D4D8DB"
+                            android:textSize="@dimen/dp_15" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/liu_RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"></androidx.recyclerview.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:id="@+id/rela_remen_zhuzaozhe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_26">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_14"
+                        android:layout_height="@dimen/dp_17"
+                        android:layout_marginLeft="@dimen/dp_21"
+                        android:layout_marginTop="@dimen/dp_26"
+                        android:background="@drawable/remen"></ImageView>
+
+                    <TextView
+                        android:layout_width="@dimen/dp_70"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginLeft="@dimen/dp_41"
+                        android:layout_marginTop="@dimen/dp_26"
+                        android:text="热门铸造者"
+                        android:textColor="#000002"
+                        android:textSize="@dimen/sp_14"></TextView>
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_98">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/butt_rec"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_98"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:descendantFocusability="blocksDescendants"></androidx.recyclerview.widget.RecyclerView>
+
+<!--
+                    <TextView
+                        android:id="@+id/tv_no_zhuzaozhe"
+                        android:layout_width="@dimen/dp_104"
+                        android:layout_height="@dimen/dp_38"
+                        android:layout_gravity="center"
+                        android:background="@drawable/create_zzz_bg"
+                        android:gravity="center"
+                        android:text="+ 成为铸造者"
+                        android:textColor="#C89C51" />
+-->
+                    <TextView
+                        android:id="@+id/tv_no_zhuzaozhe"
+                        android:layout_width="@dimen/dp_104"
+                        android:layout_height="@dimen/dp_38"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="暂无数据"
+                        android:textColor="#C89C51" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rela_yishupin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginRight="@dimen/dp_10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:drawableLeft="@mipmap/yishupin_scan"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:text="艺术品" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="更多>>" />
+
+                        </RelativeLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recy_yishupin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants"></androidx.recyclerview.widget.RecyclerView>
+
+                        <RelativeLayout
+                            android:id="@+id/rela_collect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginRight="@dimen/dp_10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:drawableLeft="@mipmap/collect_scan"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:text="收藏品" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="更多>>" />
+
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recy_shoucangpin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants"></androidx.recyclerview.widget.RecyclerView>
+
+                        <RelativeLayout
+                            android:id="@+id/rela_ticket"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginRight="@dimen/dp_10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:drawableLeft="@mipmap/ticket_scan"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:text="票务" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="更多>>" />
+
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recy_piaowu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants"></androidx.recyclerview.widget.RecyclerView>
+
+                        <RelativeLayout
+                            android:id="@+id/rela_qingshepin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:visibility="gone"
+                            android:layout_marginRight="@dimen/dp_10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:drawableLeft="@mipmap/qingshe_scan"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:text="轻奢品" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="更多>>" />
+
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recy_qingshepin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants"></androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_no_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/home_no_data" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_15"
+                            android:text="暂无数据" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <include
+                    android:id="@+id/include1"
+                    layout="@layout/multipage_layout_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"></include>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

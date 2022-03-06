@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".view.activity.wallet.AssetsDetailActivity">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/topics_head_sss_layout" />
+
+    <LinearLayout
+        android:id="@+id/lin_all_assets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="@dimen/dp_27"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:src="@mipmap/logo_gpb" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:text="总资产" />
+
+            <TextView
+                android:id="@+id/tv_all_amount_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:text="0.000000" />
+
+            <TextView
+                android:id="@+id/tv_yue_equal_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="≈ USDG" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/transfer_receive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_all_assets"
+        android:layout_marginTop="@dimen/dp_40"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_transfer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_42"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_weight="1"
+            android:background="@drawable/assets_detail_transfer_bg"
+            android:gravity="center"
+            android:text="@string/transfer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_receive_payment"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_42"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/assets_detail_receive_bg"
+            android:gravity="center"
+            android:text="@string/receive_payment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_manager_assets"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_42"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_weight="1"
+            android:background="@drawable/assets_detail_manager_bg"
+            android:gravity="center"
+            android:text="@string/assets_manager"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/assets_detail_view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/transfer_receive"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="#F5F5F5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/assets_detail_view"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tb_assets_detail"
+            style="@style/newsTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabRippleColor="@color/transparent" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager_assets_detail"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

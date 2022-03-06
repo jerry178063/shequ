@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".view.activity.me.PersonalActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:background="@drawable/bg_go_trade">
+
+        <LinearLayout
+            android:id="@+id/cha_item"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:src="@mipmap/trade_back_two" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:text="编辑个人资料"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="@dimen/dp_25"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:gravity="center">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/dp_70"
+                        android:layout_height="@dimen/dp_70">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_70"
+                        android:layout_height="@dimen/dp_70"
+                        android:background="@drawable/shoy"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/me_camera"
+                            android:layout_width="@dimen/dp_35"
+                            android:layout_height="@dimen/dp_35"
+                            android:background="@drawable/xiangji">
+                        </ImageView>
+                    </LinearLayout>
+                        <ImageView
+                            android:id="@+id/me_camera2"
+                            android:layout_width="@dimen/dp_70"
+                            android:layout_height="@dimen/dp_70"
+                            android:scaleType="centerCrop">
+                        </ImageView>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:gravity="center"
+                    android:text="点击头像可更换图片,选择400*400以上的图像"
+                    android:textColor="#D25353"
+                    android:textSize="@dimen/sp_12"></TextView>
+
+                <TextView
+                    android:id="@+id/me_personal_unique"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:gravity="center"
+                    android:text=""></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_22"
+                    android:layout_marginTop="@dimen/dp_55"
+                    android:text="您可以设置您的个性化个人资料"
+                    android:textColor="#7D542B"
+                    android:textSize="@dimen/sp_12"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:text="显示名称:"
+                    android:textColor="#202121"
+                    android:textSize="@dimen/sp_15"></TextView>
+
+                <EditText
+                    android:id="@+id/nickName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:background="@null"
+                    android:hint="请输入您的显示昵称，如哈里里"
+                    android:textColorHint="#D7D7D7"
+                    android:textSize="@dimen/sp_15">
+
+                </EditText>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/re_yinsi"
+                    android:background="#F7F7F7" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:text="个性签名:"
+                    android:visibility="gone"
+                    android:textColor="#202121"
+                    android:textSize="@dimen/sp_15"></TextView>
+
+                <EditText
+                    android:id="@+id/nftSign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:background="@null"
+                    android:hint="请输入您的个性签名"
+                    android:textColorHint="#D7D7D7"
+                    android:textSize="@dimen/sp_15"></EditText>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/re_yinsi"
+                    android:background="#F7F7F7" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:text="我的地址"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/dp_14"></TextView>
+
+                    <TextView
+                        android:id="@+id/me_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:background="@drawable/shoyy"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/dp_5"
+                        android:paddingRight="@dimen/dp_5"
+                        android:text="添加新地址"
+                        android:textColor="#EBCFA3"
+                        android:textSize="@dimen/dp_14"></TextView>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/personal_rec"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/dp_70"
+                        android:layout_marginLeft="@dimen/dp_15"></androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/me_per"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_35"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/shoyyy"
+            android:gravity="center"
+            android:text="保存并修改"
+            android:textColor="#EBCFA3"></TextView>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+include ':app',
+        ':biz_widget',
+        ':biz_net',
+        ':biz_common',
+        ':lib_opensource'
+
+rootProject.name = "NFT"
+include ':network'
+include ':networklibs'
+include ':imageselector'
+include ':share2'
+include ':WheelPicker'
+include ':Common'
+include ':WheelView'

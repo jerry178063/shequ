@@ -1,0 +1,79 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+        defaultConfig {
+            minSdkVersion rootProject.ext.android.minSdkVersion
+            targetSdkVersion rootProject.ext.android.targetSdkVersion
+            versionName rootProject.ext.android.defaultName
+            versionCode rootProject.ext.android.defaultCode
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+    buildTypes {
+        mrelease.initWith(buildTypes.debug)
+        mrelease {
+            matchingFallbacks = ['debug']
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    configurations.all {
+
+        resolutionStrategy {
+            force "com.android.support:appcompat-v7:${depsVersion.supportVersion}"
+        }
+
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api rootProject.ext.deps.loginterceptor
+    api rootProject.ext.deps.smartrefreshlayout
+    api rootProject.ext.deps.smartrefreshlayoutheader
+//    api rootProject.ext.deps.bugly
+    api rootProject.ext.deps.nativecrashreport
+    api rootProject.ext.deps.tiny
+
+    // Widgets
+    api rootProject.ext.deps.xtablayout
+    api rootProject.ext.deps.statusbar
+    api rootProject.ext.deps.adapterhelper
+    api rootProject.ext.deps.fragmentation
+//    api rootProject.ext.deps.space_util
+    annotationProcessor rootProject.ext.deps.arouter
+    api rootProject.ext.deps.butterknifeapi
+    api rootProject.ext.deps.eventbus
+    api rootProject.ext.deps.gson
+
+    // OkHttp + Retrofit + RxJava
+    api rootProject.ext.deps.okhttp
+    api rootProject.ext.deps.okhttpurl
+    api rootProject.ext.deps.okhttplogging
+    api rootProject.ext.deps.convertergson
+    api rootProject.ext.deps.rxjava2
+    api rootProject.ext.deps.rxandroid2
+    api rootProject.ext.deps.rxadapter
+    api rootProject.ext.deps.chuck
+//    implementation rootProject.ext.deps.space_util
+    // ARouter
+    api rootProject.ext.deps.arouterapi
+    annotationProcessor rootProject.ext.deps.arouter
+
+    // 界面生命周期绑定
+    api rootProject.ext.deps.rxlifecycle2
+
+
+}

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".view.activity.me.LocationActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:background="@drawable/bg_go_trade">
+        <LinearLayout
+            android:id="@+id/location_fan"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/trade_back_two" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_titled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:text="收货地址"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/lin_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:text="联系人："
+            android:textColor="#ff202121"
+            android:textSize="15sp"></TextView>
+
+        <EditText
+            android:id="@+id/location_lian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:background="@null"
+            android:hint="请输入联系人"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textColorHint="#D7D7D7"
+            android:maxLength="14"
+            android:textColor="#ff202121"
+            android:textSize="15sp"></EditText>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/re_yinsi"
+            android:background="#F7F7F7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_29"
+            android:text="电话："
+            android:textColor="#ff202121"
+            android:textSize="15sp"></TextView>
+
+        <EditText
+            android:id="@+id/location_dian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:background="@null"
+            android:hint="请输入电话"
+            android:inputType="number"
+            android:maxLength="11"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textColorHint="#D7D7D7"
+            android:textColor="#ff202121"
+            android:textSize="15sp"></EditText>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/re_yinsi"
+            android:background="#F7F7F7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_29"
+            android:text="所在地区"
+            android:textColor="#ff202121"
+            android:textSize="15sp"></TextView>
+
+        <TextView
+            android:id="@+id/location_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:text="选择所在地区"
+            android:background="@null"
+            android:enabled="true"
+            android:textColorHint="#D7D7D7"
+            android:textColor="#ff202121"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textSize="15sp"></TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/re_yinsi"
+            android:background="#F7F7F7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_29"
+            android:text="请输入详细地址："
+            android:textColor="#ff202121"
+            android:textSize="15sp"></TextView>
+
+        <EditText
+            android:id="@+id/location_xiang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:background="@null"
+            android:hint="请输入详细街道，门牌号"
+            android:textColor="#ff202121"
+            android:maxLength="50"
+            android:textColorHint="#D7D7D7"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textSize="15sp"></EditText>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/re_yinsi"
+            android:background="#F7F7F7" />
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_below="@+id/lin_top"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/img_is_goumai"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:background="@drawable/trade_detail_selector"></ImageView>
+
+            <TextView
+                android:id="@+id/tv_is_goumai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2F2F2F"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="设置为默认地址" />
+
+        </LinearLayout>
+
+
+        <TextView
+        android:id="@+id/location_add"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:background="@drawable/shoyyy"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:text="新增收货地址"
+        android:textColor="#fffadcad"
+        android:layout_alignParentBottom="true"
+        android:textSize="16sp"></TextView>
+    </RelativeLayout>
+</LinearLayout>

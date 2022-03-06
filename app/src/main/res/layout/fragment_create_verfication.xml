@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".view.activity.trade.CreateVerificationActivity">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/topics_head_sss_layout"/>
+
+   <ScrollView
+       android:layout_below="@+id/top"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center_horizontal"
+           android:orientation="vertical">
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/dp_110"
+               android:src="@mipmap/pic_verifier"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="注意事项"
+               android:layout_marginTop="@dimen/dp_30"
+               android:textColor="#E77474"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="@dimen/dp_40"
+               android:layout_marginRight="@dimen/dp_40"
+               android:text="如果验证节点行为不端将可能会被罚没部分委托代币(比如验证节点双重签名、经常性离线)为了规避风险,请认真选择合格的验证节点。"
+               android:layout_marginTop="@dimen/dp_15"
+               android:textColor="#646566"/>
+
+       </LinearLayout>
+
+   </ScrollView>
+    <TextView
+        android:id="@+id/tv_has_read"
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_height="@dimen/dp_46"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/assets_detail_transfer_bg"
+        android:textColor="@color/white"
+        android:text="已阅读并同意"/>
+
+</RelativeLayout>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.unique.blockchain.nft">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <permission
+        android:name="com.unique.blockchain.nft.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="android.permission.READ_PHONE_STATE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.gpb.blockchain.nodemgr.permission.JPUSH_MESSAGE" /> <!-- Required -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- android 9.0之后使用前台服务，需要添加权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo_new"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="MissingClass"
+        tools:replace="icon,label,theme">
+        <activity
+            android:name=".view.activity.me.LocationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.me.PersonalActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.me.RegisterDigitalStoreActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.me.DigitalStoreActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.me.PledgeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.mark.PaiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.MyGoBuyActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".view.activity.me.GriiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.RemenActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.butt_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.mark.SouActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.HomeShareActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.MyGoBuySearchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.mark.SouCollectActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.mark.ProductImageActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".view.activity.mark.NoticeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.me.DigitalAssetsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.me.MyCollectionActiviy"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.me.NftTransferActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.mark.StartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.mark.BiddingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.mark.HolderActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.wallet.AddDigitalAssetsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.wallet.SearchAddDigitalAssetsActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".view.activity.me.NftTiHuoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.me.NftAdminHuoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.me.NftCancelBackActivity"
+            android:exported="true" />
+
+
+        <activity android:name=".view.activity.wallet.LoadWalletActivity" />
+        <activity android:name=".view.activity.wallet.WalletSuccessActivity" />
+        <activity android:name=".view.activity.wallet.FristCreadActivity" />
+        <activity android:name=".view.activity.wallet.WordActivity" />
+        <activity android:name=".view.activity.wallet.SureWordActivity" />
+        <activity android:name=".view.activity.wallet.SelectedLianActivity" />
+        <activity
+            android:name=".view.activity.wallet.CreateUserActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".view.activity.wallet.BackupsActivity" />
+        <activity
+            android:name=".GuideActivity"
+            android:theme="@style/splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".view.activity.SplashActivity"
+            android:launchMode="standard" />
+
+        <activity
+            android:name=".view.activity.wallet.CreateWalletSuccessActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.AssetsDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.TransferWalletAssetsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.MinerFeeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.MinerFeeTransterActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.me.AddressReceiveActivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".view.activity.wallet.ReceivePaymentActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.AssetsManagerActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.me.SouMeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.me.RegisterAgainDigitalStoreActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".view.activity.me.DigitalHomeAssetsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.AdditionlActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.KuaLianTransferActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.DestroyAsstesActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.UnLockAsstesActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.TransferOwnerAsstesActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.CrossBackAssetsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.me.RegisterDigitalResultActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.TransferHeYueWalletAssetsActivity"
+            android:launchMode="singleTop" />
+
+
+        <activity
+            android:name=".view.activity.trade.CreateVerificationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.CreateRealVerificationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.HasVerificationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.CommissionRateActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.CommissionVerificationIncomeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.VoteActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.VoteDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.VoteRuleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.StartVoteActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.SponsorDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.CommissionActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.GoCommissionDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.AdminCommissionActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.CommissionRecordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.ShareCommissionActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.trade.ShareIncomeRecordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.ui.BuyPriceSuccessActivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".view.activity.me.WalletManagerActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.me.FeedbackActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.AdWebActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.AdWebTwoActivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".view.activity.me.PushNoticeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.me.HelpCenterActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.SystemNoticeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.me.LanguageActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.SystemNoticeContentActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.NewsContentActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.DiscoverSearchActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.ArtworkActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.MarkCollectActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.MarkTicketActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.MarkQingSheActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.FlashBuyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.FlashRecordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.ImportWalletSuccessActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.wallet.BackupsNoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.ui.OutPriceActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".view.activity.mark.ui.BuyMarkActivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".view.activity.trade.SendAssetsActivity"
+            android:launchMode="singleTop"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name="com.donkingliang.imageselector.ImageSelectorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.donkingliang.imageselector.PreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.donkingliang.imageselector.ClipImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+
+        <service android:name=".service.DownloadService" />
+
+        <provider
+            android:name=".widget.DownLoadProvider"
+            android:authorities="com.unique.blockchain.nft.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="name,resource" />
+        </provider>
+
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.trade.TradeListDetailActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.trade.TradeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.me.SettingActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".websocket.BizRouterServices"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".websocket.BizRouterServices$GrayInnerFourService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":gray" />
+    </application>
+
+</manifest>

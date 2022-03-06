@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<string name="api_url" translatable="false">https://ckfpapi.ailipool.com/</string>-->
+    <string name="web_url" translatable="false">https://ckfph5.ailipool.com/</string>
+    <string name="api_url" translatable="false">http://192.168.2.125:10080/</string>
+</resources>

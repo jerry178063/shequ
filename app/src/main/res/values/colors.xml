@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="tab_unselect">#A1A8B4</color>
+    <color name="color_8D40F3">#8D40F3</color>
+    <color name="color_270738">#270738</color>
+    <color name="color_303235">#303235</color>
+    <color name="color_646566">#646566</color>
+    <color name="color_A9AAAB">#A9AAAB</color>
+    <color name="color_F5F5F6">#F5F5F6</color>
+    <color name="color_5678E5">#5678E5</color>
+    <color name="blue">#00a5ec</color> <!-- 蓝色 -->
+    <color name="gray3">#e2dbe2</color>
+    <color name="color_66D399">#66D399</color>
+    <color name="color_E77474">#E77474</color>
+    <color name="color_E05569_">#E05569</color>
+    <color name="color_232323">#232323</color>
+    <color name="color_D7D7D7">#D7D7D7</color>
+    <color name="color_242424">#242424</color>
+    <color name="color_FADCAD">#FADCAD</color>
+    <color name="color_BBA091">#BBA091</color>
+    <color name="color_106DFE">#106DFE</color>
+    <color name="color_E2C28B">#E2C28B</color>
+    <color name="color_A5A5A5">#A5A5A5</color>
+    <color name="color_9F9F9F">#9F9F9F</color>
+    <color name="color_FF7816">#FF7816</color>
+    <color name="color_5B5B5B">#5B5B5B</color>
+    <color name="color_FFF906">#FFF906</color>
+    <color name="color_9095AB">#9095AB</color>
+    <color name="color_626061">#626061</color>
+    <color name="color_DA6E6E">#DA6E6E</color>
+
+    <color name="color_FF5602">#FF5602</color>
+    <color name="color_2CC815">#2CC815</color>
+
+</resources>
